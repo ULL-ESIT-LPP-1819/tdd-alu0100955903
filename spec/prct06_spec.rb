@@ -10,40 +10,40 @@ RSpec.describe Etiqueta do
 
 	describe "#almacenamiento de datos" do
 		it "Se almacena correctamente la grasa" do
-			@etiqueta1.expect(grasa).to_be eq(10)
+			expect(@etiqueta1.grasa).to eq(10)
 		end
 
 
                 it "Se almacena correctamente las monoinsaturadas" do
-                        expect(@etiqueta1.mono).to_be eq(20)
+                        expect(@etiqueta1.mono).to eq(20)
                 end
 
                 it "Se almacena correctamente las polinsaturadas" do
-                        expect(@etiqueta1.poli).to_be eq(30)
+                        expect(@etiqueta1.poli).to eq(30)
                 end
 
                 it "Se almacena correctamente los hidratos de carbono" do
-                        expect(@etiqueta1.hidratos).to_be eq(40)
+                        expect(@etiqueta1.hidratos).to eq(40)
                 end
 
                 it "Se almacena correctamente los polialcoles" do
-                        expect(@etiqueta1.polialcoles).to_be eq(50)
+                        expect(@etiqueta1.polialcoles).to eq(50)
                 end
 
                 it "Se almacena correctamente el almidon" do
-                        expect(@etiqueta1.almidon).to_be eq(60)
+                        expect(@etiqueta1.almidon).to eq(60)
                 end
 
                 it "Se almacena correctamente la fibra alimentaria" do
-                        expect(@etiqueta1.fibra).to_be eq(70)
+                        expect(@etiqueta1.fibra).to eq(70)
                 end
 
                 it "Se almacena correctamente la proteinas" do
-                        expect(@etiqueta1.proteinas).to_be eq(80)
+                        expect(@etiqueta1.proteinas).to eq(80)
                 end
 
                 it "Se almacena correctamente la sal" do
-			expect(@etiqueta1.sal).to_be eq(90)
+			expect(@etiqueta1.sal).to eq(90)
                 end
 	end
 end	

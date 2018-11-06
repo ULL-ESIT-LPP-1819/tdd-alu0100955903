@@ -7,5 +7,10 @@
 
 class Etiqueta
 
+	attr_reader :grasa, :mono, :poli, :hidratos, :polialcoles, :almidon, :fibra, :proteinas, :sal
+
+	def initialize(grasa,mono,poli,hidratos,polialcoles,almidon,fibra,proteinas,sal)
+		@grasa, @mono, @poli, @hidratos, @polialcoles, @almidon, @fibra, @proteinas, @sal = grasa,mono,poli,hidratos,polialcoles,almidon,fibra,proteinas,sal
+	end
 end
 
