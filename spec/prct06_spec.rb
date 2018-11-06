@@ -1,4 +1,4 @@
-require 'Etiqueta.rb'
+require 'lib/prct06/Etiqueta.rb'
 
 
 
