@@ -1,6 +1,8 @@
 require 'lib/prct06/Etiqueta.rb'
 
+describe Etiqueta do
 
+end
 
 #RSpec.describe Prct06 do
 #  it "has a version number" do
