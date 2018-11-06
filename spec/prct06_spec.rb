@@ -7,3 +7,5 @@ RSpec.describe Prct06 do
     expect(false).to eq(true)
   end
 end
+
+
