@@ -17,4 +17,8 @@ class Etiqueta
 	def grasas_totales
 		@grasas_totales = @saturadas + @monoinsaturadas + @polinsaturadas
 	end
+
+	def hidratos
+		@hidratos = @azucares + @polialcoles + @almidon
+	end
 end
