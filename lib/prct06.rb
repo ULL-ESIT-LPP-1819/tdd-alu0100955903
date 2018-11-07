@@ -13,4 +13,8 @@ class Etiqueta
 	def initialize (nombre, saturadas, monoinsaturadas, polinsaturadas, azucares, polialcoles, almidon, fibra, proteinas, sal)
 		@nombre, @saturadas, @monoinsaturadas, @polinsaturadas, @azucares, @polialcoles, @almidon, @fibra, @proteinas, @sal = nombre, saturadas, monoinsaturadas, polinsaturadas, azucares, polialcoles, almidon, fibra, proteinas, sal
 	end
+
+	def grasas_totales
+		@grasas_totales = @saturadas + @monoinsaturadas + @polinsaturadas
+	end
 end
