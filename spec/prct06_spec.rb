@@ -48,6 +48,10 @@ RSpec.describe Etiqueta do
 		it "Valor correcto: Grasas totales" do
 			expect(@etiqueta1.grasas_totales).to eq(30)
 		end
+
+		it "Valor correcto: Hidratos de carbono" do
+			expect(@etiqueta1.hidratos).to eq(30)
+		end
 	end
 end
 #RSpec.describe Prct06 do
