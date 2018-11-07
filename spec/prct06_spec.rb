@@ -44,6 +44,10 @@ RSpec.describe Etiqueta do
 		it "Almacenamiento correcto: sal" do
 			expect(@etiqueta1.sal).to eq(10)
 		end
+
+		it "Valor correcto: Grasas totales" do
+			expect(@etiqueta1.grasas_totales).to eq(30)
+		end
 	end
 end
 #RSpec.describe Prct06 do
