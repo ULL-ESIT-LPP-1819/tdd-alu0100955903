@@ -5,6 +5,3 @@ RSpec::Core::RakeTask.new(:spec)
 
 task :default => :spec
 
-task :spec do
-	sh "rspec -I. spec/prct06_spec.rb"
-end
