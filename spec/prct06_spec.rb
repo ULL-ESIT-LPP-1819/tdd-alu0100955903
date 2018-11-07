@@ -55,6 +55,10 @@ RSpec.describe Etiqueta do
 
 		it "Valor energetico correcto (kj)" do
 			expect(@etiqueta1.ener_kj).to eq(2050)
+		end
+
+		it "valor energetico correcto (kcal)" do
+			expect(@etiqueta1.ener_kcal).to eq(494)
 		end	
 	end
 end
