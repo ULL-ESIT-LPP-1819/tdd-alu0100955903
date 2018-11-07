@@ -52,6 +52,10 @@ RSpec.describe Etiqueta do
 		it "Valor correcto: Hidratos de carbono" do
 			expect(@etiqueta1.hidratos).to eq(30)
 		end
+
+		it "Valor energetico correcto (kj)" do
+			expect(@etiqueta1.ener_kj).to eq(2050)
+		end	
 	end
 end
 #RSpec.describe Prct06 do
