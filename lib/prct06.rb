@@ -16,6 +16,7 @@ class Etiqueta
 
 	def grasas_totales
 		@grasas_totales = @saturadas + @monoinsaturadas + @polinsaturadas
+		return @grasas_totales
 	end
 
 	def hidratos
@@ -33,6 +34,10 @@ class Etiqueta
 	
 	def devolver_nombre
                 return @nombre
+        end
+
+        def devolver_saturadas
+                return @saturadas
         end
 
 end
