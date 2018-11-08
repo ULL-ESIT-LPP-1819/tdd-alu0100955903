@@ -36,8 +36,12 @@ class Etiqueta
                 return @nombre
         end
 
-        def devolver_saturadas
+        def devolver_grasas_saturadas
                 return @saturadas
         end
+
+	def devolver_azucar
+		return @azucares
+	end
 
 end
