@@ -21,6 +21,7 @@ class Etiqueta
 
 	def hidratos
 		@hidratos = @azucares + @polialcoles + @almidon
+		return @hidratos
 	end
 
 	def ener_kj
@@ -84,5 +85,10 @@ class Etiqueta
                 @ir_proteina = (@proteinas/50.to_f)*100
                 @ir_proteina.round(1)
         end
+
+	def ir_sal
+		@ir_sal = (@sal/6.to_f)*100
+		@ir_sal.round(1)
+	end
 
 end
