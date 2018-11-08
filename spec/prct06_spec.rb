@@ -59,7 +59,12 @@ RSpec.describe Etiqueta do
 
 		it "valor energetico correcto (kcal)" do
 			expect(@etiqueta1.ener_kcal).to eq(494)
-		end	
+		end
+
+		it "Correcto: Devuelve el nombre" do
+			expect(@etiqueta1.devolver_nombre) =="Galletas"
+		end
+	
 	end
 end
 #RSpec.describe Prct06 do
