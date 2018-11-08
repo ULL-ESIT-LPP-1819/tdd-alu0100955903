@@ -64,4 +64,5 @@ class Etiqueta
 		@ir_grasa_total.round(1)
 	end
 
+
 end
