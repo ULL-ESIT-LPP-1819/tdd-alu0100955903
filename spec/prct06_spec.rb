@@ -84,6 +84,10 @@ RSpec.describe Etiqueta do
 		it "Valor correcto: IR valor energetico" do
 			expect(@etiqueta1.ir_energetico).to eq(24.4)
 		end
+
+		it "Valor correcto: IR grasa total" do
+			expect(@etiqueta1.ir_grasa_total).to eq(42.8)
+		end
 	end	
 end
 #RSpec.describe Prct06 do
