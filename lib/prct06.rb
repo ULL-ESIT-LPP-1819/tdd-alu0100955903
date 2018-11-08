@@ -81,8 +81,8 @@ class Etiqueta
 	end
 
 	def ir_proteina
-		@ir_proteina = (@proteinas/50.to_f)*100
-		@ir_proteina.round(1)
-	end
+                @ir_proteina = (@proteinas/50.to_f)*100
+                @ir_proteina.round(1)
+        end
 
 end
