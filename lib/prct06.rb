@@ -63,6 +63,9 @@ class Etiqueta
 		@ir_grasa_total = (@grasa_ir/70.to_f) * 100
 		@ir_grasa_total.round(1)
 	end
-
+	
+	def ir_grasa_saturada
+		@ir_grasa_saturada = (@saturadas/20.to_f)*100
+	end
 
 end
