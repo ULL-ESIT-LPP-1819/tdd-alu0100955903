@@ -44,4 +44,8 @@ class Etiqueta
 		return @azucares
 	end
 
+	def devolver_proteinas
+		return @proteinas
+	end
+
 end
