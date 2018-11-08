@@ -53,9 +53,15 @@ class Etiqueta
 	end
 
 	def ir_energetico
-		@ener_ir =ener_kj
+		@ener_ir = ener_kj
 		@ir_energetico = (@ener_ir/8400.to_f) * 100
 		@ir_energetico.round(1)
+	end
+
+	def ir_grasa_total
+		@grasa_ir = grasas_totales
+		@ir_grasa_total = (@grasa_ir/70.to_f) * 100
+		@ir_grasa_total.round(1)
 	end
 
 end
