@@ -64,7 +64,10 @@ RSpec.describe Etiqueta do
 		it "Correcto: Devuelve el nombre" do
 			expect(@etiqueta1.devolver_nombre) =="Galletas"
 		end
-	
+
+		it "Correcto: Devuelve cantidad de grasas saturadas" do
+			expect(@etiqueta1.devolver_grasas_saturadas). to eq(10)
+		end	
 end
 #RSpec.describe Prct06 do
 #  it "has a version number" do
