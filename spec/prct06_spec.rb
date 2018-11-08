@@ -86,7 +86,15 @@ RSpec.describe Etiqueta do
 		end
 
 		it "Valor correcto: IR grasa total" do
-			expect(@etiqueta1.ir_grasa_total).to eq(42.8)
+			expect(@etiqueta1.ir_grasa_total).to eq(42.9)
+		end
+
+		it "Valor correcto: IR ácidos grasos" do
+			expect(@etiqueta1.ir_grasa_saturada).to eq(50)
+		end
+
+		it "Valor correcto: IR hidratos de carbono" do
+			expect(@etiqueta1.ir_hidratos).to eq(11.5)
 		end
 	end	
 end
