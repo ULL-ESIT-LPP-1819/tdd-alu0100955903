@@ -80,6 +80,10 @@ RSpec.describe Etiqueta do
 		it "Correcto: Devuelve cantidad de sal" do
 			expect(@etiqueta1.devolver_sal).to eq(10)
 		end
+
+		it "Valor correcto: IR valor energetico" do
+			expect(@etiqueta1.ir_energetico).to eq(24.4)
+		end
 	end	
 end
 #RSpec.describe Prct06 do
