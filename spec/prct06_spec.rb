@@ -72,6 +72,10 @@ RSpec.describe Etiqueta do
 		it "Correcto: Devuelve cantidad de azucares" do
 			expect(@etiqueta1.devolver_azucar).to eq(10)
 		end
+
+		it "Correcto: Devuelve cantidad de proteinas" do
+			expect(@etiqueta1.devolver_proteinas).to eq(10)
+		end
 	end	
 end
 #RSpec.describe Prct06 do
