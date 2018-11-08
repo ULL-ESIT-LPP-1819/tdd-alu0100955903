@@ -24,8 +24,8 @@ class Etiqueta
 	end
 
 	def ener_kj
-		@ener_kj = @saturadas * 37 + @monoinsaturadas * 37 + @polinsaturadas * 37 + @azucares * 17 + @polialcoles * 10 + @almidon * 17 + @fibra * 8 + @proteinas * 17 + @sal * 25
-		return @ener_kj
+		@@ener_kj = @saturadas * 37 + @monoinsaturadas * 37 + @polinsaturadas * 37 + @azucares * 17 + @polialcoles * 10 + @almidon * 17 + @fibra * 8 + @proteinas * 17 + @sal * 25
+		return @@ener_kj
 	end	
 
 	def ener_kcal
@@ -53,9 +53,7 @@ class Etiqueta
 	end
 
 	def ir_energetico
-		@ener_ir =ener_kj
-		@ir_energetico = (@ener_ir/8400.to_f) * 100
-		@ir_energetico.round(1)
+		@ir_energetico = @@ener_kj / 8400 * 100
 	end
 
 end
