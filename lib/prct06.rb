@@ -29,4 +29,10 @@ class Etiqueta
 	def ener_kcal
 		@ener_kcal = @saturadas * 9 + @monoinsaturadas * 9 + @polinsaturadas * 9 + @azucares * 4 + @polialcoles * 2.4 + @almidon * 4 + @fibra * 2 + @proteinas * 4 + @sal * 6
 	end
+	
+	def devolver_nombre
+                return @nombre
+        end
+
+
 end
