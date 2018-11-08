@@ -100,6 +100,10 @@ RSpec.describe Etiqueta do
 		it "Valor correcto: IR azucares" do
 			expect(@etiqueta1.ir_azucares).to eq(11.1)
 		end
+
+		it "Valor correcto: IR proteinas" do
+			expect(@etiqueta1.ir_proteina).to eq(20)
+		end
 	end	
 end
 #RSpec.describe Prct06 do

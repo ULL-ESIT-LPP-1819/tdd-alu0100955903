@@ -80,4 +80,9 @@ class Etiqueta
 		@ir_azucares.round(1)
 	end
 
+	def ir_proteina
+		@ir_proteina = (@proteinas/50.to_f)*100
+		@ir_proteina.round(1)
+	end
+
 end
