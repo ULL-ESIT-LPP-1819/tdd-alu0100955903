@@ -24,6 +24,7 @@ class Etiqueta
 
 	def ener_kj
 		@ener_kj = @saturadas * 37 + @monoinsaturadas * 37 + @polinsaturadas * 37 + @azucares * 17 + @polialcoles * 10 + @almidon * 17 + @fibra * 8 + @proteinas * 17 + @sal * 25
+		return @ener_kj
 	end	
 
 	def ener_kcal
@@ -33,6 +34,5 @@ class Etiqueta
 	def devolver_nombre
                 return @nombre
         end
-
 
 end
