@@ -65,6 +65,9 @@ RSpec.describe Etiqueta do
 			expect(@etiqueta1.devolver_nombre) =="Galletas"
 		end
 	
+		it "Correcto: Devuelve el valor energetico" do
+			expect(@etiqueta1.devolver_valor_energetico). to eq(2050)
+		end
 	end
 end
 #RSpec.describe Prct06 do
