@@ -48,4 +48,8 @@ class Etiqueta
 		return @proteinas
 	end
 
+	def devolver_sal
+		return @sal
+	end
+
 end
