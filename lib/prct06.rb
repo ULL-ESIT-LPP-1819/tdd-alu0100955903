@@ -66,12 +66,18 @@ class Etiqueta
 	
 	def ir_grasa_saturada
 		@ir_grasa_saturada = (@saturadas/20.to_f)*100
+		@ir_grasa_saturada.round(1)
 	end
 
 	def ir_hidratos
 		@hidratos_ir = hidratos
 		@ir_hidratos = (@hidratos_ir/260.to_f)*100
 		@ir_hidratos.round(1)
+	end
+
+	def ir_azucares
+		@ir_azucares = (@azucares/90.to_f)*100
+		@ir_azucares.round(1)
 	end
 
 end
