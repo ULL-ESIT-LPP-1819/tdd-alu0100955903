@@ -4,7 +4,7 @@ RSpec.describe Etiqueta do
 		@etiqueta1 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,10)
 	end
 
-	describe "# Etiqueta" do
+	describe "Etiqueta paquete galletas" do
 		it "Almacenamiento correcto: nombre" do
 			expect(@etiqueta1.nombre) == "Galletas"
 		end
