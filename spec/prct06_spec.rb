@@ -1,10 +1,10 @@
 
 RSpec.describe Etiqueta do
-	before :each do
+	before :each do #Inicializamos los datos
 		@etiqueta1 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,10)
 	end
 
-	describe "Etiqueta paquete galletas" do
+	describe "Etiqueta paquete galletas" do #descripcion de las pruebas
 		it "Almacenamiento correcto: nombre" do
 			expect(@etiqueta1.nombre) == "Galletas"
 		end
