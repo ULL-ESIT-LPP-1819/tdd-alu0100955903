@@ -1,52 +1,114 @@
-require 'prct06.rb'
-
-
 RSpec.describe Etiqueta do
-
-
-	before :each do
-		@etiqueta1 = Etiqueta.new(10,20,30,40,50,60,70,80,90)
+	before :each do #Inicializamos los datos
+		@etiqueta1 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,10)
 	end
 
-	describe "#almacenamiento de datos" do
-		it "Se almacena correctamente la grasa" do
-			expect(@etiqueta1.grasa).to eq(10)
+	describe "Etiqueta paquete galletas" do #descripcion de las pruebas
+		it "Almacenamiento correcto: nombre" do
+			expect(@etiqueta1.nombre) == "Galletas"
 		end
 
+    		it "Almacenamiento correcto: grasas saturadas" do
+      			expect(@etiqueta1.saturadas).to eq(10)
+   	 	end
 
-                it "Se almacena correctamente las monoinsaturadas" do
-                        expect(@etiqueta1.mono).to eq(20)
-                end
+		it "Almacenamiento correcto: grasas monoinsaturadas" do
+			expect(@etiqueta1.monoinsaturadas).to eq(10)
+		end
 
-                it "Se almacena correctamente las polinsaturadas" do
-                        expect(@etiqueta1.poli).to eq(30)
-                end
+		it "Almacenamiento correcto: grasas polinsaturadas" do
+			expect(@etiqueta1.polinsaturadas).to eq(10)
+		end
 
-                it "Se almacena correctamente los hidratos de carbono" do
-                        expect(@etiqueta1.hidratos).to eq(40)
-                end
+		it "Almacenamiento correcto: azucares" do
+			expect(@etiqueta1.azucares).to eq(10)
+		end
 
-                it "Se almacena correctamente los polialcoles" do
-                        expect(@etiqueta1.polialcoles).to eq(50)
-                end
+		it "Almacenamiento correcto: polialcoles" do
+			expect(@etiqueta1.polialcoles).to eq(10)
+		end
 
-                it "Se almacena correctamente el almidon" do
-                        expect(@etiqueta1.almidon).to eq(60)
-                end
+		it "Almacenamiento correcto: almidon" do
+			expect(@etiqueta1.almidon).to eq(10)
+		end
 
-                it "Se almacena correctamente la fibra alimentaria" do
-                        expect(@etiqueta1.fibra).to eq(70)
-                end
+		it "Almacenamiento correcto: fibra" do
+			expect(@etiqueta1.fibra).to eq(10)
+		end
 
-                it "Se almacena correctamente la proteinas" do
-                        expect(@etiqueta1.proteinas).to eq(80)
-                end
+		it "Almacenamiento correcto: proteinas" do
+			expect(@etiqueta1.proteinas).to eq(10)
+		end
 
-                it "Se almacena correctamente la sal" do
-			expect(@etiqueta1.sal).to eq(90)
-                end
-	end
-end	
+		it "Almacenamiento correcto: sal" do
+			expect(@etiqueta1.sal).to eq(10)
+		end
+
+		it "Valor correcto: Grasas totales" do
+			expect(@etiqueta1.grasas_totales).to eq(30)
+		end
+
+		it "Valor correcto: Hidratos de carbono" do
+			expect(@etiqueta1.hidratos).to eq(30)
+		end
+
+		it "Valor energetico correcto (kj)" do
+			expect(@etiqueta1.ener_kj).to eq(2050)
+		end
+
+		it "valor energetico correcto (kcal)" do
+			expect(@etiqueta1.ener_kcal).to eq(494)
+		end
+
+		it "Correcto: Devuelve el nombre" do
+			expect(@etiqueta1.devolver_nombre) =="Galletas"
+		end
+
+		it "Correcto: Devuelve cantidad de grasas saturadas" do
+			expect(@etiqueta1.devolver_grasas_saturadas). to eq(10)
+		end
+		
+		it "Correcto: Devuelve cantidad de azucares" do
+			expect(@etiqueta1.devolver_azucar).to eq(10)
+		end
+
+		it "Correcto: Devuelve cantidad de proteinas" do
+			expect(@etiqueta1.devolver_proteinas).to eq(10)
+		end
+
+		it "Correcto: Devuelve cantidad de sal" do
+			expect(@etiqueta1.devolver_sal).to eq(10)
+		end
+
+		it "Valor correcto: IR valor energetico" do
+			expect(@etiqueta1.ir_energetico).to eq(24.4)
+		end
+
+		it "Valor correcto: IR grasa total" do
+			expect(@etiqueta1.ir_grasa_total).to eq(42.9)
+		end
+
+		it "Valor correcto: IR ácidos grasos" do
+			expect(@etiqueta1.ir_grasa_saturada).to eq(50)
+		end
+
+		it "Valor correcto: IR hidratos de carbono" do
+			expect(@etiqueta1.ir_hidratos).to eq(11.5)
+		end
+
+		it "Valor correcto: IR azucares" do
+			expect(@etiqueta1.ir_azucares).to eq(11.1)
+		end
+
+		it "Valor correcto: IR proteinas" do
+			expect(@etiqueta1.ir_proteina).to eq(20)
+		end
+
+		it "Valor correcto: IR sal" do
+			expect(@etiqueta1.ir_sal).to eq(166.7)
+		end
+	end	
+end
 
 #RSpec.describe Prct06 do
 #  it "has a version number" do
