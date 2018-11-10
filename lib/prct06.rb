@@ -85,6 +85,5 @@ class Etiqueta
 		@ir_sal.round(1)
 	end
 
->>>>>>> desarrollo
 end
 
