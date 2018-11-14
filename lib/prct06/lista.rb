@@ -41,9 +41,12 @@ class List
 		else
 			aux=@head
 			@head=@head.nest
-			aux.nest=NIL
 			if(head!=NIL)
 				@head.prev=NIL
+			end
+			aux.nest=NIL
+			if(@head==NIL)
+				@tail=NIL
 			end
 		end			
 
