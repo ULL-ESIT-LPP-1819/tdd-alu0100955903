@@ -20,6 +20,17 @@ class List
                 end
         end
 
+	def insertar_por_cabeza(nodo)
+		if(@head==NIL)
+			@tail=nodo
+			@head=nodo
+		else
+			nodo.nest=@head
+			@head.prev=nodo
+			@head=nodo
+		end
+	end
+
         def extraer_por_cabeza(nodo)
 		if(@head==NIL)
 			puts "No hay nada que extraer (lista vacia)"
