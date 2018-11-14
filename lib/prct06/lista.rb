@@ -43,6 +43,17 @@ class List
 
         end
 
+	def extraer_por_cola(nodo)
+		if(@head==NIL)
+			puts "No hay nada que extraer (lista vacia)"
+		else
+			nodo.prev.nest=NIL
+			@tail=nodo.prev
+		end
+
+		return nodo
+	end
+
         def vacio
         end
 
