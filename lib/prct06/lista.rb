@@ -21,7 +21,14 @@ class List
         end
 
         def extraer_por_cabeza(nodo)
+		if(@head==NIL)
+			puts "No hay nada que extraer (lista vacia)"
+		else
+			nodo.nest.prev=NIL
+			@head=nodo.nest
+		end
 
+		return nodo
 
         end
 
