@@ -5,9 +5,6 @@ RSpec::Core::RakeTask.new(:spec)
 
 task :default => :spec
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> desarrollo
+task :lista do
+	sh "rspec -I .spec/lista_spec.rb"
+end
