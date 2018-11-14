@@ -74,4 +74,24 @@ class List
 		end
         end
 
+	def to_s
+
+		puntero=@head
+		cadena='['
+			if(@head!=NIL)
+				while puntero!= NIL
+					cadena+=puntero.value.to_s + ']'
+					if(puntero.nest!=NIL)
+						puntero=puntero.nest
+						cadena+= '['
+					else
+						puntero=NIL
+					end
+				end
+			end
+
+		puts cadena
+	end	
+			
+
 end

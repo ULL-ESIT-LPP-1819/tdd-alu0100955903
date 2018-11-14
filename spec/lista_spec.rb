@@ -41,7 +41,10 @@ RSpec.describe Prct06 do
 		end
 
 		it "Correcto: se imprime bien" do
-			expect(@lista.to_s)=="[1,2,3]"
+                        @lista.insertar_por_cola(@nodo1)
+                        @lista.insertar_por_cola(@nodo2)
+			@lista.insertar_por_cola(@nodo3)
+			expect(@lista.to_s)=="[1][2][3]"
 		end
 	end
 end
