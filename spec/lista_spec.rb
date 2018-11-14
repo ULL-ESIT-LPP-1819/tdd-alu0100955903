@@ -32,6 +32,12 @@ RSpec.describe Prct06 do
 			@lista.extraer_por_cola(@nodo1)
 			expect(@lista.tail.value).to eq(2)
 		end
+
+		it "Correcto: comprueba si está vacia" do
+			@lista.insertar_por_cola(@nodo1)
+			@lista.extraer_por_cola(@nodo1)
+			expect(nodo).to be(TRUE)
+		end
 	end
 end
 
