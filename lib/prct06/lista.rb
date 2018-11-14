@@ -17,8 +17,10 @@ class List
                         nodo.prev=@tail
                         @tail.nest=nodo
                         @tail=nodo
+			nodo.nest=NIL
                 end
-        end
+
+	end
 
 	def insertar_por_cabeza(nodo)
 		if(@head==NIL)
@@ -28,33 +30,48 @@ class List
 			nodo.nest=@head
 			@head.prev=nodo
 			@head=nodo
+			nodo.prev=NIL
 		end
+
 	end
 
-        def extraer_por_cabeza(nodo)
+        def extraer_por_cabeza
 		if(@head==NIL)
 			puts "No hay nada que extraer (lista vacia)"
 		else
-			nodo.nest.prev=NIL
-			@head=nodo.nest
-		end
+			aux=@head
+			@head=@head.nest
+			aux.nest=NIL
+			if(head!=NIL)
+				@head.prev=NIL
+			end
+		end			
 
-		return nodo
+		return aux
 
         end
 
-	def extraer_por_cola(nodo)
-		if(@head==NIL)
+	def extraer_por_cola
+		if(@tail==NIL)
 			puts "No hay nada que extraer (lista vacia)"
 		else
-			nodo.prev.nest=NIL
-			@tail=nodo.prev
+			aux=@tail
+			@tail=@tail.prev
+			aux.prev=NIL
+			if(@tail!=NIL)
+				@tail.nest=NIL
+			end
 		end
-
-		return nodo
+			
+		return aux
 	end
 
         def vacio
+		if(@tail==NIL)
+			return TRUE
+		else
+			return FALSE
+		end
         end
 
 end

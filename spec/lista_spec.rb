@@ -17,7 +17,7 @@ RSpec.describe Prct06 do
 		it "Extrae nodo por cabeza bien" do
 			@lista.insertar_por_cola(@nodo1)
 			@lista.insertar_por_cola(@nodo2)
-			@lista.extraer_por_cabeza(@nodo1)
+			@lista.extraer_por_cabeza
 			expect(@lista.head.value).to eq(2)
 		end
 
@@ -27,16 +27,16 @@ RSpec.describe Prct06 do
 		end
 
 		it "Extrae nodo por cola bien" do
-			@lista.insertar_por_cabeza(@nodo1)
-			@lista.insertar_por_cabeza(@nodo2)
-			@lista.extraer_por_cola(@nodo1)
-			expect(@lista.tail.value).to eq(2)
+			@lista.insertar_por_cola(@nodo1)
+			@lista.insertar_por_cola(@nodo2)
+			@lista.extraer_por_cola
+			expect(@lista.head.value).to eq(1)
 		end
 
 		it "Correcto: comprueba si está vacia" do
-			@lista.insertar_por_cola(@nodo1)
-			@lista.extraer_por_cola(@nodo1)
-			expect(nodo).to be(TRUE)
+                        @lista.insertar_por_cola(@nodo2)
+                        @lista.extraer_por_cola
+			expect(@lista.vacio).to be(TRUE)
 		end
 	end
 end
