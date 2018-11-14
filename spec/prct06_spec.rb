@@ -1,3 +1,5 @@
+require 'prct06/prct06.rb'
+
 RSpec.describe Etiqueta do
 	before :each do #Inicializamos los datos
 		@etiqueta1 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,10)
