@@ -13,6 +13,13 @@ RSpec.describe Prct06 do
 			@lista.insertar_por_cola(@nodo1)
 			expect(@lista.tail.value).to eq(1)
 		end
+
+		it "Extrae nodo bien" do
+			@lista.insertar_por_cola(@nodo1)
+			@lista.insertar_por_cola(@nodo2)
+			@lista.extraer_por_cabeza(@nodo1)
+			expect(@lista.head.value).to eq(2)
+		end
 	end
 end
 
