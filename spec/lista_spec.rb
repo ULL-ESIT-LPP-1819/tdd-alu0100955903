@@ -5,7 +5,8 @@ RSpec.describe Prct06 do
         before :each do #Inicializamos los datos
 		@nodo1 = Node.new(1,NIL,NIL)
 		@nodo2 = Node.new(2,NIL,NIL)
-		@lista = List.new(NIL, NIL)
+		@nodo3 = Node.new(3,NIL,NIL)
+		@lista = List.new(NIL,NIL)
         end
 	
 	describe "Pruebas de lista" do
@@ -37,6 +38,10 @@ RSpec.describe Prct06 do
                         @lista.insertar_por_cola(@nodo2)
                         @lista.extraer_por_cola
 			expect(@lista.vacio).to be(TRUE)
+		end
+
+		it "Correcto: se imprime bien" do
+			expect(@lista.to_s)=="[1,2,3]"
 		end
 	end
 end
