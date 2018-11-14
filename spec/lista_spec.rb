@@ -9,16 +9,21 @@ RSpec.describe Prct06 do
         end
 	
 	describe "Pruebas de lista" do
-		it "Inserta nodo bien" do
+		it "Inserta nodo por cola bien" do
 			@lista.insertar_por_cola(@nodo1)
 			expect(@lista.tail.value).to eq(1)
 		end
 
-		it "Extrae nodo bien" do
+		it "Extrae nodo por cabeza bien" do
 			@lista.insertar_por_cola(@nodo1)
 			@lista.insertar_por_cola(@nodo2)
 			@lista.extraer_por_cabeza(@nodo1)
 			expect(@lista.head.value).to eq(2)
+		end
+
+		it "Inserta nodo por cabeza bien" do
+			@lista.insertar_por_cabeza(@nodo1)
+			expect(@lista.head.value).to eq(1)
 		end
 	end
 end
