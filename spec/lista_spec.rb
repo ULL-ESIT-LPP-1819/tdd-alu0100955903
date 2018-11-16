@@ -3,8 +3,8 @@ require 'prct06/lista.rb'
 
 RSpec.describe Prct06 do
         before :each do #Inicializamos los datos
-		@nodo1 = Node.new(1,NIL,NIL)
-		@nodo2 = Node.new(2,NIL,NIL)
+		@nodo1 = Node.new(1,nil,nil)
+		@nodo2 = Node.new(2,nil,nil)
 
                 @etiqueta1 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,1)
                 @etiqueta2 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,2)
@@ -17,18 +17,18 @@ RSpec.describe Prct06 do
                 @etiqueta9 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,10)
                 @etiqueta10 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,11)
 
-		@nodo3 = Node.new(@etiqueta1,NIL,NIL)
-                @nodo4 = Node.new(@etiqueta2,NIL,NIL)
-                @nodo5 = Node.new(@etiqueta3,NIL,NIL)
-                @nodo6 = Node.new(@etiqueta4,NIL,NIL)
-                @nodo7 = Node.new(@etiqueta5,NIL,NIL)
-                @nodo8 = Node.new(@etiqueta6,NIL,NIL)
-                @nodo9 = Node.new(@etiqueta7,NIL,NIL)
-                @nodo10 = Node.new(@etiqueta8,NIL,NIL)
-                @nodo11 = Node.new(@etiqueta9,NIL,NIL)
-                @nodo12 = Node.new(@etiqueta10,NIL,NIL)
+		@nodo3 = Node.new(@etiqueta1,nil,nil)
+                @nodo4 = Node.new(@etiqueta2,nil,nil)
+                @nodo5 = Node.new(@etiqueta3,nil,nil)
+                @nodo6 = Node.new(@etiqueta4,nil,nil)
+                @nodo7 = Node.new(@etiqueta5,nil,nil)
+                @nodo8 = Node.new(@etiqueta6,nil,nil)
+                @nodo9 = Node.new(@etiqueta7,nil,nil)
+                @nodo10 = Node.new(@etiqueta8,nil,nil)
+                @nodo11 = Node.new(@etiqueta9,nil,nil)
+                @nodo12 = Node.new(@etiqueta10,nil,nil)
 
-		@lista = List.new(NIL,NIL)
+		@lista = List.new(nil,nil)
         end
 	
 	describe "Pruebas de lista" do
@@ -59,7 +59,7 @@ RSpec.describe Prct06 do
 		it "Correcto: comprueba si está vacia" do
                         @lista.insertar_por_cola(@nodo2)
                         @lista.extraer_por_cola
-			expect(@lista.vacio).to be(TRUE)
+			expect(@lista.vacio).to be(true)
 		end
 
 		it "Correcto: se imprime bien" do
