@@ -23,4 +23,19 @@ RSpec.describe Prct06 do
 		end
 	end
 
+	describe "Pruebas de Etiqueta" do
+
+                it "La clase etiqueta existe" do
+                        expect(@e1.class).to eq(Etiqueta)
+                end
+
+                it "Es una instancia de la clase etiqueta" do
+                        expect(@e1.instance_of? Etiqueta).to eq(true)
+                end
+
+                it "Es un objeto de la clase etiqueta" do
+                        expect(@e1.is_a? Etiqueta).to eq(true)
+                end
+        end
 end
+
