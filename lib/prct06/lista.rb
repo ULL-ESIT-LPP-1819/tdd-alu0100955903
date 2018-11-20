@@ -9,44 +9,46 @@ class List
 		@tail = tail
 	end
 
-        def insertar_por_cola(nodo)
-                if(@tail==NIL)
+        def insertar_por_cola(value)
+		nodo=Node.new(value,nil,nil)
+                if(@tail==nil)
                         @tail=nodo
                         @head=nodo
                 else
                         nodo.prev=@tail
                         @tail.nest=nodo
                         @tail=nodo
-			nodo.nest=NIL
+			nodo.nest=nil
                 end
 
 	end
 
-	def insertar_por_cabeza(nodo)
-		if(@head==NIL)
+	def insertar_por_cabeza(value)
+		nodo=Node.new(value,nil,nil)
+		if(@head==nil)
 			@tail=nodo
 			@head=nodo
 		else
 			nodo.nest=@head
 			@head.prev=nodo
 			@head=nodo
-			nodo.prev=NIL
+			nodo.prev=nil
 		end
 
 	end
 
         def extraer_por_cabeza
-		if(@head==NIL)
+		if(@head==nil)
 			puts "No hay nada que extraer (lista vacia)"
 		else
 			aux=@head
 			@head=@head.nest
-			if(head!=NIL)
-				@head.prev=NIL
+			if(head!=nil)
+				@head.prev=nil
 			end
-			aux.nest=NIL
-			if(@head==NIL)
-				@tail=NIL
+			aux.nest=nil
+			if(@head==nil)
+				@tail=nil
 			end
 		end			
 
@@ -55,14 +57,14 @@ class List
         end
 
 	def extraer_por_cola
-		if(@tail==NIL)
+		if(@tail==nil)
 			puts "No hay nada que extraer (lista vacia)"
 		else
 			aux=@tail
 			@tail=@tail.prev
-			aux.prev=NIL
-			if(@tail!=NIL)
-				@tail.nest=NIL
+			aux.prev=nil
+			if(@tail!=nil)
+				@tail.nest=nil
 			end
 		end
 			
@@ -70,10 +72,10 @@ class List
 	end
 
         def vacio
-		if(@tail==NIL)
-			return TRUE
+		if(@tail==nil)
+			return true
 		else
-			return FALSE
+			return false
 		end
         end
 
@@ -81,19 +83,18 @@ class List
 
 		puntero=@head
 		cadena='['
-			if(@head!=NIL)
-				while puntero!= NIL
+			if(@head!=nil)
+				while puntero!= nil
 					cadena+=puntero.value.to_s + ']'
-					if(puntero.nest!=NIL)
+					if(puntero.nest!=nil)
 						puntero=puntero.nest
 						cadena+= '['
 					else
-						puntero=NIL
+						puntero=nil
 					end
 				end
 			end
 
-		puts cadena
 	end	
 			
 
