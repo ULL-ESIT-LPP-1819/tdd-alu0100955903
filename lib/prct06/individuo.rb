@@ -2,8 +2,7 @@ class Individuo
 	
 	attr_reader :dni, :nombre
 
-	initialize (dni, nombre)
-		@dni= dni
-		@nombre = nombre
+	def initialize (dni, nombre)
+		@dni, @nombre = dni, nombre
 	end
 end

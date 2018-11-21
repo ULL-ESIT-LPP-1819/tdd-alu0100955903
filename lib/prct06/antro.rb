@@ -7,7 +7,7 @@ class Antropometrico < Individuo
         end
 
         def imc
-                @imc= @peso/(@altura*@altura) #calculamos el imc
+		@imc= @peso.to_f/(@altura*@altura) #calculamos el imc
                 @imc.round(1) #especificamos que solo queremos un decimal
         end
 
