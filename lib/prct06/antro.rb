@@ -1,3 +1,5 @@
+require "prct06/individuo.rb"
+
 class Antropometrico < Individuo
         attr_reader :peso, :altura
         def initialize (peso, altura)
