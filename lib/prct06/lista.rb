@@ -1,8 +1,27 @@
 Node = Struct.new(:value, :nest, :prev)
 
+module MyEnumerable
+
+	def select(&block)
+		result =[]
+		self.each do |element|
+			result << element if block.call(element) == true
+		end
+		result
+	end
+
+	def map(&block)
+		result=[]
+		self.each do |element|
+			result << block.call(element)
+		end
+		result
+	end
+end
+
 class List
 
-	include Enumerable
+	include MyEnumerable
 
 	attr_reader :head, :tail
 	
@@ -100,58 +119,59 @@ class List
 	end
 
 
-	#def each(&block)
-    	#	block.call(@head)
-    	#	@tail.each(&block) if @tail
-  	#end
 
-	#def each(&block)
-    	#	if block_given?
-    	# 		block.call(@head)
-      	#		@tail.each(&block) if @tail
-    	#	else
-      	#		to_enum(:each)
-    	#	end
-  	#end
 
-	def min
-		if(@head != nil)
-			@aux=@head
-			@min=@head
 
-			while(@aux.nest!=nil)
-				@aux = @aux.nest
-				if(@aux.value<@min.value)
-					@min = @aux
-				end
-			end
 
-			return @min.value
-		else
-			return nil
-		end
 
+
+
+
+
+	def each(&block)
+		@tail.each(&block)
+		self
 	end
 
-        def max
-                if(@head != nil)
-                        @aux=@head
-                        @max=@head
 
-                        while(@aux.nest!=nil)
-                                @aux = @aux.nest
-                                if(@aux.value>@max.value)
-                                        @max = @aux
-                                end
-                        end
+	#def min
+	#	if(@head != nil)
+	#		@aux=@head
+	#		@min=@head
+	#
+	#			while(@aux.nest!=nil)
+	#				@aux = @aux.nest
+	#				if(@aux.value<@min.value)
+	#					@min = @aux
+	#				end
+	#			end
+	#
+	#			return @min.value
+	#		else
+	#			return nil
+	#		end
+	#
+	#	end
+	#
+	#       def max
+	#              if(@head != nil)
+	#                     @aux=@head
+    	#                 @max=@head
+	#
+        #               while(@aux.nest!=nil)
+        #                        @aux = @aux.nest
+        #                        if(@aux.value>@max.value)
+        #                                @max = @aux
+        #                        end
+        #                end
+	#
+        #                return @max.value
+        #        else
+        #                return nil
+	#
+        #        end
 
-                        return @max.value
-                else
-                        return nil
-
-                end
-
-        end
+	#end
 
 
 			
