@@ -6,12 +6,14 @@ RSpec.describe Prct06 do
         before :each do
                 @l1 = List.new(nil,nil)
 	
+		@la = List.new(nil,nil)
 		@a1 = Antropometrico.new(10,150,3,4,5,6)
 		@a2 = Antropometrico.new(20,150,3,4,5,6)
 		@a3 = Antropometrico.new(30,150,3,4,5,6)
 		@a4 = Antropometrico.new(45,150,3,4,5,6)
 		@a5 = Antropometrico.new(50,150,3,4,5,6)
 
+		@le = List.new(nil,nil)
                 @e1 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,10)
                 @e2 = Etiqueta.new("Galletas",20,20,20,20,20,20,20,20,20)
                 @e3 = Etiqueta.new("Galletas",30,30,30,30,30,30,30,30,30)
@@ -123,6 +125,16 @@ RSpec.describe Prct06 do
 
 		it "Prueba '>=' para individuos" do
 			expect(@a1>=@a2).to eq(true)
+		end
+	end
+
+	describe "Pruebas enumerable Lista [Etiqueta]" do
+
+		it "Prueba 'min' lista de etiquetas" do
+			@le.insertar_por_cabeza(@e1)
+			@le.insertar_por_cabeza(@e2)
+			@le.insertar_por_cabeza(@e3)
+			expect(@le.min).to eq(@e1)
 		end
 	end
 
