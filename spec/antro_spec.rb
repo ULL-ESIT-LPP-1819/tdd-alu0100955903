@@ -7,11 +7,11 @@ RSpec.describe Prct06 do
                 @l1 = List.new(nil,nil)
 		@e1 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,10)
 	
-		@a1 = Antropometrico.new(50,180)
-		@a2 = Antropometrico.new(50,150)
-		@a3 = Antropometrico.new(40,160)
-		@a4 = Antropometrico.new(35,150)
-		@a5 = Antropometrico.new(60,150)
+		@a1 = Antropometrico.new(50,180,3,4,5,6)
+		@a2 = Antropometrico.new(50,150,3,4,5,6)
+		@a3 = Antropometrico.new(40,160,3,4,5,6)
+		@a4 = Antropometrico.new(35,150,3,4,5,6)
+		@a5 = Antropometrico.new(60,150,3,4,5,6)
         end
 
         describe "Pruebas de lista" do
@@ -83,5 +83,6 @@ RSpec.describe Prct06 do
 			expect(aux.value.imc).to be<(25)
 		end
 	end
+
 end
 
