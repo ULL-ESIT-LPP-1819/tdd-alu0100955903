@@ -6,11 +6,11 @@ RSpec.describe Prct06 do
         before :each do
                 @l1 = List.new(nil,nil)
 	
-		@a1 = Antropometrico.new(50,180,3,4,5,6)
-		@a2 = Antropometrico.new(50,150,3,4,5,6)
-		@a3 = Antropometrico.new(40,160,3,4,5,6)
-		@a4 = Antropometrico.new(35,150,3,4,5,6)
-		@a5 = Antropometrico.new(60,150,3,4,5,6)
+		@a1 = Antropometrico.new(10,150,3,4,5,6)
+		@a2 = Antropometrico.new(20,150,3,4,5,6)
+		@a3 = Antropometrico.new(30,150,3,4,5,6)
+		@a4 = Antropometrico.new(45,150,3,4,5,6)
+		@a5 = Antropometrico.new(50,150,3,4,5,6)
 
                 @e1 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,10)
                 @e2 = Etiqueta.new("Galletas",20,20,20,20,20,20,20,20,20)
@@ -90,24 +90,41 @@ RSpec.describe Prct06 do
 
 	describe "Pruebas comparable Etiqueta" do
 		
-		it "Prueba <" do
+		it "Prueba  '<' para etiquetas" do
 			expect(@e1<@e2).to eq(true)
 		end
 
-		it "Prueba >" do
+		it "Prueba  '>' para etiquetas" do
 			expect(@e1>@e2).to eq(false)
 		end
 
-		it "Prueba =<" do
+		it "Prueba '<=' para etiquetas" do
 			expect(@e1<=@e2).to eq(true)
 		end
 
-		it "Prueba =>" do
+		it "Prueba '>=' para etiquetas" do
 			expect(@e1>=@e2).to eq(false)
 		end
 	end
 
 	describe "Pruebas comparable Individuo" do
+
+		it "Prueba  '<' para individuos" do
+			expect(@a1<@a2).to eq(true)
+		end
+		
+		it "Prueba  '>' para individuos" do
+			expect(@a1>@a2).to eq(false)
+		end
+
+		it "Prueba '<=' para individuos" do
+			expect(@a1<=@a2).to eq(true)
+		end
+
+		it "Prueba '>=' para individuos" do
+			expect(@a1>=@a2).to eq(false)
+		end
+	end
 
 
 end
