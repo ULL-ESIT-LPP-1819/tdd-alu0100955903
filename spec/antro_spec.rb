@@ -107,6 +107,8 @@ RSpec.describe Prct06 do
 		end
 	end
 
+	describe "Pruebas comparable Individuo" do
+
 
 end
 
