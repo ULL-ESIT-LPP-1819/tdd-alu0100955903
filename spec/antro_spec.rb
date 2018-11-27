@@ -84,5 +84,29 @@ RSpec.describe Prct06 do
 		end
 	end
 
+	describe "Pruebas comparable Etiqueta" do
+		
+		@e1 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,10)
+		@e2 = Etiqueta.new("Galletas",20,20,20,20,20,20,20,20,20)
+		@e3 = Etiqueta.new("Galletas",30,30,30,30,30,30,30,30,30)
+
+		it "Prueba <" do
+			expect(@e1<@e2).to_eq(true)
+		end
+
+		it "Prueba >" do
+			expect(@e1>@e2).to_eq(false)
+		end
+
+		it "Prueba =<" do
+			expect(@e1<=@e2).to_eq(true)
+		end
+
+		it "Prueba =>" do
+			expect(@e1>=@e2).to_eq(false)
+		end
+	end
+
+
 end
 

@@ -1,5 +1,6 @@
 class Etiqueta
 
+	
 	attr_reader :nombre, :saturadas, :monoinsaturadas, :polinsaturadas, :azucares, :polialcoles, :almidon, :fibra, :proteinas, :sal #Recibimos los datos
 	
 
@@ -84,6 +85,7 @@ class Etiqueta
 		@ir_sal = (@sal/6.to_f)*100
 		@ir_sal.round(1)
 	end
+	
 
 end
 
