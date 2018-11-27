@@ -1,6 +1,7 @@
 class Etiqueta
 
-	
+	include Comparable
+
 	attr_reader :nombre, :saturadas, :monoinsaturadas, :polinsaturadas, :azucares, :polialcoles, :almidon, :fibra, :proteinas, :sal #Recibimos los datos
 	
 
@@ -86,6 +87,12 @@ class Etiqueta
 		@ir_sal.round(1)
 	end
 	
+
+
+
+	def <=> (other)
+		ener_kj <=> other.ener_kj
+	end
 
 end
 
