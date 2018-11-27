@@ -136,6 +136,13 @@ RSpec.describe Prct06 do
 			@le.insertar_por_cabeza(@e3)
 			expect(@le.min).to eq(@e1)
 		end
+
+		it "Prueba 'max' lista de etiqueta" do
+                        @le.insertar_por_cabeza(@e1)
+                        @le.insertar_por_cabeza(@e2)
+                        @le.insertar_por_cabeza(@e3)
+                        expect(@le.max).to eq(@e3)
+		end
 	end
 
 

@@ -2,6 +2,8 @@ Node = Struct.new(:value, :nest, :prev)
 
 class List
 
+	include Enumerable
+
 	attr_reader :head, :tail
 	
 	def initialize (head, tail)
@@ -94,6 +96,40 @@ class List
 					end
 				end
 			end
+
+	end
+
+
+	#def each(&block)
+    	#	block.call(@head)
+    	#	@tail.each(&block) if @tail
+  	#end
+
+	#def each(&block)
+    	#	if block_given?
+    	# 		block.call(@head)
+      	#		@tail.each(&block) if @tail
+    	#	else
+      	#		to_enum(:each)
+    	#	end
+  	#end
+
+	def min
+		if(@head != nil)
+			@aux=@head
+			@min=@head
+
+			while(@aux.nest!=nil)
+				@aux = @aux.nest
+				if(@aux.value<@min.value)
+					@min = @aux
+				end
+			end
+
+			return @min.value
+		else
+			return nil
+		end
 
 	end
 
