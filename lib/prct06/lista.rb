@@ -148,6 +148,7 @@ class List
                         return @max.value
                 else
                         return nil
+
                 end
 
         end
