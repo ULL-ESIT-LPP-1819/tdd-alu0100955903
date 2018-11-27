@@ -133,6 +133,26 @@ class List
 
 	end
 
+        def max
+                if(@head != nil)
+                        @aux=@head
+                        @max=@head
+
+                        while(@aux.nest!=nil)
+                                @aux = @aux.nest
+                                if(@aux.value>@max.value)
+                                        @max = @aux
+                                end
+                        end
+
+                        return @max.value
+                else
+                        return nil
+                end
+
+        end
+
+
 			
 
 end
