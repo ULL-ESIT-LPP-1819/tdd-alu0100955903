@@ -1,6 +1,9 @@
 require "prct06/individuo.rb"
 
 class Antropometrico < Individuo
+
+	include Comparable
+
         attr_reader :peso, :altura, :edad, :sexo, :cintura, :cadera
         def initialize (peso, altura, edad, sexo, cintura, cadera)
                 @peso,@altura,@edad,@sexo, @cintura, @cadera = peso, altura, edad, sexo, cintura, cadera #asignamos a las variables de instancia los valores de inicio que le pasamos desde el test
@@ -8,7 +11,7 @@ class Antropometrico < Individuo
 
         def imc
                 @imc= @peso/(@altura*@altura) #calculamos el imc
-                @imc.round(1) #especificamos que solo queremos un decimal
+                @imc.round(4) #especificamos que solo queremos un decimal
         end
 
         def grasa
@@ -20,4 +23,10 @@ class Antropometrico < Individuo
                 @rcc =@cintura / @cadera #calculamos el rcc
                 @rcc.round(1) #especificamos que solo queremos un decimal
         end
+
+
+
+	def <=> (other)
+		imc<=>other.imc
+	end
 end

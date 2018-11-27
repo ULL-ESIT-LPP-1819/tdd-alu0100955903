@@ -110,7 +110,7 @@ RSpec.describe Prct06 do
 	describe "Pruebas comparable Individuo" do
 
 		it "Prueba  '<' para individuos" do
-			expect(@a1<@a2).to eq(true)
+			expect(@a1<@a2).to eq(false)
 		end
 		
 		it "Prueba  '>' para individuos" do
@@ -122,7 +122,7 @@ RSpec.describe Prct06 do
 		end
 
 		it "Prueba '>=' para individuos" do
-			expect(@a1>=@a2).to eq(false)
+			expect(@a1>=@a2).to eq(true)
 		end
 	end
 
