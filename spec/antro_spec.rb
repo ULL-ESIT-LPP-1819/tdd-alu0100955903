@@ -162,6 +162,7 @@ RSpec.describe Prct06 do
 			@la.insertar_por_cabeza(@a3)
 
 			expect(@la.min).to eq(@a1)
+			expect(@la.max).to eq(@a3)
 		end
 	end	
 end
