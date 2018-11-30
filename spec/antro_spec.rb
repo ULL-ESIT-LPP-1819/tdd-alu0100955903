@@ -146,6 +146,8 @@ RSpec.describe Prct06 do
 		 	
 			expect(@le.min).to eq(@e1)
 			expect(@le.max).to eq(@e3)
+			expect(@le.sort).to eq([@e1,@e2,@e3])
+			
 		end
 	end
 end
