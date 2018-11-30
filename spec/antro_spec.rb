@@ -148,6 +148,7 @@ RSpec.describe Prct06 do
 			expect(@le.max).to eq(@e3)
 			expect(@le.sort).to eq([@e1,@e2,@e3])
 			expect(@le.select{|i| i.nombre == "Galletas"}).to eq([@e1])
+			expect(@le.collect{|i| @e1}).to eq([@e1,@e1,@e1])
 
 		end
 	end
