@@ -152,4 +152,16 @@ RSpec.describe Prct06 do
 
 		end
 	end
+
+	describe "Pruebas enumerable Lista [Antropometrico]" do
+
+		it "Pruebas lista de antropometrico" do
+			
+			@la.insertar_por_cabeza(@a1)
+			@la.insertar_por_cabeza(@a2)
+			@la.insertar_por_cabeza(@a3)
+
+			expect(@la.min).to eq(@a1)
+		end
+	end	
 end
