@@ -1,27 +1,8 @@
 Node = Struct.new(:value, :nest, :prev)
 
-module MyEnumerable
-
-	def select(&block)
-		result =[]
-		self.each do |element|
-			result << element if block.call(element) == true
-		end
-		result
-	end
-
-	def map(&block)
-		result=[]
-		self.each do |element|
-			result << block.call(element)
-		end
-		result
-	end
-end
-
 class List
 
-	include MyEnumerable
+	include Enumerable
 
 	attr_reader :head, :tail
 	
@@ -105,7 +86,7 @@ class List
 		puntero=@head
 		cadena='['
 			if(@head!=nil)
-				while puntero!= nil
+				while (puntero!= nil) do
 					cadena+=puntero.value.to_s + ']'
 					if(puntero.nest!=nil)
 						puntero=puntero.nest
@@ -118,62 +99,12 @@ class List
 
 	end
 
-
-
-
-
-
-
-
-
-
-
 	def each(&block)
-		@tail.each(&block)
-		self
+		puntero=@head
+		while (puntero!=nil) do
+			yield puntero.value
+			puntero=puntero.nest
+		end
 	end
-
-
-	#def min
-	#	if(@head != nil)
-	#		@aux=@head
-	#		@min=@head
-	#
-	#			while(@aux.nest!=nil)
-	#				@aux = @aux.nest
-	#				if(@aux.value<@min.value)
-	#					@min = @aux
-	#				end
-	#			end
-	#
-	#			return @min.value
-	#		else
-	#			return nil
-	#		end
-	#
-	#	end
-	#
-	#       def max
-	#              if(@head != nil)
-	#                     @aux=@head
-    	#                 @max=@head
-	#
-        #               while(@aux.nest!=nil)
-        #                        @aux = @aux.nest
-        #                        if(@aux.value>@max.value)
-        #                                @max = @aux
-        #                        end
-        #                end
-	#
-        #                return @max.value
-        #        else
-        #                return nil
-	#
-        #        end
-
-	#end
-
-
-			
 
 end
