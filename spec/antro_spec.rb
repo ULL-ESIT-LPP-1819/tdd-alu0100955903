@@ -145,6 +145,7 @@ RSpec.describe Prct06 do
 		        @le.insertar_por_cabeza(@e3)
 		 	
 			expect(@le.min).to eq(@e1)
+			expect(@le.max).to eq(@e3)
 		end
 	end
 end
