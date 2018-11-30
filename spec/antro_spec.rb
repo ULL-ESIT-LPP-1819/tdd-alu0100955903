@@ -15,8 +15,8 @@ RSpec.describe Prct06 do
 
 		@le = List.new(nil,nil)
                 @e1 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,10)
-                @e2 = Etiqueta.new("Galletas",20,20,20,20,20,20,20,20,20)
-                @e3 = Etiqueta.new("Galletas",30,30,30,30,30,30,30,30,30)
+                @e2 = Etiqueta.new("Pipas",20,20,20,20,20,20,20,20,20)
+                @e3 = Etiqueta.new("Oreo",30,30,30,30,30,30,30,30,30)
 
         end
 
@@ -147,7 +147,8 @@ RSpec.describe Prct06 do
 			expect(@le.min).to eq(@e1)
 			expect(@le.max).to eq(@e3)
 			expect(@le.sort).to eq([@e1,@e2,@e3])
-			
+			expect(@le.select{|i| i.nombre == "Galletas"}).to eq([@e1])
+
 		end
 	end
 end
