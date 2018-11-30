@@ -107,6 +107,10 @@ RSpec.describe Prct06 do
 		it "Prueba '>=' para etiquetas" do
 			expect(@e1>=@e2).to eq(false)
 		end
+
+		it "Prueba between para etiquetas" do
+			expect(@e2.between?(@e1,@e3)).to eq(true)
+		end
 	end
 
 	describe "Pruebas comparable Individuo" do
@@ -125,6 +129,10 @@ RSpec.describe Prct06 do
 
 		it "Prueba '>=' para individuos" do
 			expect(@a1>=@a2).to eq(true)
+		end
+
+		it "Prueba between para individuo" do
+			expect(@a2.between?(@a1,@a3)).to eq(true)
 		end
 	end
 
