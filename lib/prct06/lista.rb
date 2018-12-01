@@ -1,16 +1,19 @@
 Node = Struct.new(:value, :nest, :prev)
 
 class List
-
+	#Modulo Enumerable
 	include Enumerable
 
+	#Punteros head y tail
 	attr_reader :head, :tail
 	
+	#Creamos una lista e inicializamos los valores
 	def initialize (head, tail)
 		@head = head
 		@tail = tail
 	end
-
+	
+	#Metodo insertar nodo por cola
         def insertar_por_cola(value)
 		nodo=Node.new(value,nil,nil)
                 if(@tail==nil)
@@ -25,6 +28,7 @@ class List
 
 	end
 
+	#Metodo insertar nodo por cabeza
 	def insertar_por_cabeza(value)
 		nodo=Node.new(value,nil,nil)
 		if(@head==nil)
@@ -39,6 +43,7 @@ class List
 
 	end
 
+	#Metodo extraer nodo por cabeza
         def extraer_por_cabeza
 		if(@head==nil)
 			puts "No hay nada que extraer (lista vacia)"
@@ -58,6 +63,7 @@ class List
 
         end
 
+	#Metodo extraer nodo por cola
 	def extraer_por_cola
 		if(@tail==nil)
 			puts "No hay nada que extraer (lista vacia)"
@@ -73,6 +79,7 @@ class List
 		return aux
 	end
 
+	#Metodo comprobar si esta vacío
         def vacio
 		if(@tail==nil)
 			return true
@@ -81,6 +88,7 @@ class List
 		end
         end
 
+	#Metodo convertir a cadena
 	def to_s
 
 		puntero=@head
@@ -99,6 +107,7 @@ class List
 
 	end
 
+	#Metodo enumerable
 	def each(&block)
 		puntero=@head
 		while (puntero!=nil) do

@@ -1,31 +1,35 @@
 require "prct06/individuo.rb"
 
 class Antropometrico < Individuo
-
+	
+	#Modulo comparable
 	include Comparable
 
+	#Recibimos peso altura, edad, sexo, cintura, cadera
         attr_reader :peso, :altura, :edad, :sexo, :cintura, :cadera
         def initialize (peso, altura, edad, sexo, cintura, cadera)
-                @peso,@altura,@edad,@sexo, @cintura, @cadera = peso, altura, edad, sexo, cintura, cadera #asignamos a las variables de instancia los valores de inicio que le pasamos desde el test
+                @peso,@altura,@edad,@sexo, @cintura, @cadera = peso, altura, edad, sexo, cintura, cadera 
         end
 
+	#Metodo para calcular el IMC
         def imc
-                @imc= @peso/(@altura*@altura) #calculamos el imc
-                @imc.round(4) #especificamos que solo queremos un decimal
+                @imc= @peso/(@altura*@altura) 
+                @imc.round(4) 
         end
 
+	#Metodo para calcular la grasa corporal
         def grasa
-                @grasa = 1.2 * @imc + 0.23 * @edad -10.8 * @sexo -5.4 #calculamos el %grasa
-                @grasa.round(1) #especificamos que solo queremos un decimal
+                @grasa = 1.2 * @imc + 0.23 * @edad -10.8 * @sexo -5.4 
+                @grasa.round(1) 
         end
 
+	#Metodo para calcular la relacion entre cadera y cintura
         def rcc
-                @rcc =@cintura / @cadera #calculamos el rcc
-                @rcc.round(1) #especificamos que solo queremos un decimal
+                @rcc =@cintura / @cadera 
+                @rcc.round(1) 
         end
 
-
-
+	#Metodo para modulo comparable
 	def <=> (other)
 		imc<=>other.imc
 	end
