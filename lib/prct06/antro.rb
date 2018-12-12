@@ -34,4 +34,17 @@ class Antropometrico < Individuo
 		imc<=>other.imc
 	end
 
+	def gasto_energetico_total
+                peso_teorico = (@altura-150)*0.75+50
+
+                if(sexo==1)
+                        gasto_energetico_basal = (10*@peso) + (6.25*@altura) - (5*@edad) + 5
+                else
+                        gasto_energetico_basal = (10*@peso) + (6.25*@altura) - (5*@edad) - 161
+                end
+
+                efecto_termogeno = gasto_energetico_basal * 0.1
+                gasto_actividad_fisica = gasto_energetico_basal * factor_actividad_fisica
+                @gasto_energetico_total = gasto_energetico_basal + efecto_termogeno + gasto_actividad_fisica
+        end
 end
