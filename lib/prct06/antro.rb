@@ -6,9 +6,9 @@ class Antropometrico < Individuo
 	include Comparable
 
 	#Recibimos peso altura, edad, sexo, cintura, cadera
-        attr_reader :peso, :altura, :edad, :sexo, :cintura, :cadera
-        def initialize (peso, altura, edad, sexo, cintura, cadera)
-                @peso,@altura,@edad,@sexo, @cintura, @cadera = peso, altura, edad, sexo, cintura, cadera 
+        attr_reader :peso, :altura, :edad, :sexo, :cintura, :cadera, :factor_actividad_fisica
+        def initialize (peso, altura, edad, sexo, cintura, cadera, factor_actividad_fisica)
+		@peso,@altura,@edad,@sexo, @cintura, @cadera, @factor_actividad_fisica = peso, altura, edad, sexo, cintura, cadera, factor_actividad_fisica 
         end
 
 	#Metodo para calcular el IMC
@@ -33,4 +33,5 @@ class Antropometrico < Individuo
 	def <=> (other)
 		imc<=>other.imc
 	end
+
 end
