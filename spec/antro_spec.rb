@@ -7,11 +7,11 @@ RSpec.describe Prct06 do
                 @l1 = List.new(nil,nil)
 	
 		@la = List.new(nil,nil)
-		@a1 = Antropometrico.new(10,150,3,4,5,6)
-		@a2 = Antropometrico.new(20,150,3,4,5,6)
-		@a3 = Antropometrico.new(30,150,3,4,5,6)
-		@a4 = Antropometrico.new(45,150,3,4,5,6)
-		@a5 = Antropometrico.new(50,150,3,4,5,6)
+		@a1 = Antropometrico.new(10,150,3,4,5,6,7)
+		@a2 = Antropometrico.new(20,150,3,4,5,6,7)
+		@a3 = Antropometrico.new(30,150,3,4,5,6,7)
+		@a4 = Antropometrico.new(45,150,3,4,5,6,7)
+		@a5 = Antropometrico.new(50,150,3,4,5,6,7)
 
 		@le = List.new(nil,nil)
                 @e1 = Etiqueta.new("Galletas",10,10,10,10,10,10,10,10,10)
