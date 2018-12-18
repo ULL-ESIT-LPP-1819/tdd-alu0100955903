@@ -1,7 +1,7 @@
-require 'prct06/lista'
+require 'prct06/lista.rb'
 require 'prct06/prct06'
 require 'prct06/antro'
-
+require 'prct06/array.rb'
 
 RSpec.describe Prct06 do
         before :each do
@@ -26,34 +26,46 @@ RSpec.describe Prct06 do
                 @array_menu << @e3
                 @array_menu << @e2
 
-		#@l1.List.new(nil,nil)
-		#@l1.insertar_por_cola(@a1)
-		#@l1.insertar_por_cola(@a4)
-		#@l1.insertar_por_cola(@a5)
-		#@l1.insertar_por_cola(@e3)
-		#@l1.insertar_por_cola(@e2)
+		@l1 = List.new(nil,nil)
+		@l1.insertar_por_cola(@a1)
+		@l1.insertar_por_cola(@a4)
+		@l1.insertar_por_cola(@a5)
+		@l1.insertar_por_cola(@e3)
+		@l1.insertar_por_cola(@e2)
         end
 
-        describe "Pruebas comparacion de listas" do
+        describe "Pruebas ordenacion de arrays" do
 
                 it "Ordena arrays de menu con bucle for" do
 
-			#expect(result.for).to eq([@e1,@e2,@e3,@e4,@e5])
+			expect(@array_menu.ordenar_for).to eq([@e1,@e2,@e3,@e4,@e5])
 		end
 
 		it "Ordena arrays de menu con bucle each" do
 
-			#expect(result.each).to eq([@e1,@e2,@e3,@e4,@e5])
+			expect(@array_menu.ordenar_each).to eq([@e1,@e2,@e3,@e4,@e5])
 		end
 
-		it "Ordena array de menu con bucle sort" do
+		it "Ordena arrays de menu con bucle sort" do
 			expect(@array_menu.sort).to eq([@e1,@e2,@e3,@e4,@e5])
 		end
-		
-
 			
 	end
 
+	describe "Pruebas ordenacion de listas" do
+		
+		it "Ordena lista de individuos con bucle for" do
+
+		end
+
+		it "Ordena lista de individuos con bucle each" do
+
+		end
+
+		it "Ordena lista de individuos con bucle sort" do
+			#expect(@l1.sort).to eq([@a1,@a2,@a3,@a4,@a5])
+		end
+	end
 end
 
 
