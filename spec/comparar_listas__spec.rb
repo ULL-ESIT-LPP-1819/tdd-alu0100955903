@@ -7,7 +7,8 @@ RSpec.describe Prct06 do
         before :each do
 
                 #peso, altura, edad, sexo, cintura, cadera, facor actividad fisica
-                @a1 = Antropometrico.new(10,200,3,1,5,6,0.20)
+		
+		@a1 = Antropometrico.new(10,200,3,1,5,6,0.20)
                 @a2 = Antropometrico.new(20,200,3,1,5,6,0.12)
                 @a3 = Antropometrico.new(30,200,3,2,5,6,0.27)
                 @a4 = Antropometrico.new(80,200,3,2,5,6,0.54)
@@ -22,17 +23,18 @@ RSpec.describe Prct06 do
                 @array_menu=[]
                 @array_menu << @e1
                 @array_menu << @e4
-                @array_menu << @e5
                 @array_menu << @e3
                 @array_menu << @e2
+		@array_menu << @e5
 
-		@l1 = List.new(nil,nil)
-		@l1.insertar_por_cola(@a1)
-		@l1.insertar_por_cola(@a4)
-		@l1.insertar_por_cola(@a5)
-		@l1.insertar_por_cola(@e3)
-		@l1.insertar_por_cola(@e2)
-        end
+		@lista = List.new(nil,nil)
+	        @lista.insertar_por_cola(@a1)
+                @lista.insertar_por_cola(@a2)
+                @lista.insertar_por_cola(@a3)
+                @lista.insertar_por_cola(@a4)
+                @lista.insertar_por_cola(@a5)
+
+	end
 
         describe "Pruebas ordenacion de arrays" do
 
@@ -56,14 +58,16 @@ RSpec.describe Prct06 do
 		
 		it "Ordena lista de individuos con bucle for" do
 
+			expect(@lista.ordenacion_for).to eq([@a1,@a2,@a3,@a4,@a5])
 		end
 
 		it "Ordena lista de individuos con bucle each" do
 
+			expect(@lista.ordenacion_each).to eq([@a1,@a2,@a3,@a4,@a5])
 		end
 
 		it "Ordena lista de individuos con bucle sort" do
-			#expect(@l1.sort).to eq([@a1,@a2,@a3,@a4,@a5])
+			expect(@lista.sort).to eq([@a1,@a2,@a3,@a4,@a5])
 		end
 	end
 end

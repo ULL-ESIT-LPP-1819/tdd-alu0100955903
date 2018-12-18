@@ -6,7 +6,7 @@ class Antropometrico < Individuo
 	include Comparable
 
 	#Recibimos peso altura, edad, sexo, cintura, cadera
-        attr_reader :peso, :altura, :edad, :sexo, :cintura, :cadera, :factor_actividad_fisica
+        attr_reader :peso, :altura, :edad, :sexo, :cintura, :cadera, :factor_actividad_fisica, :imc
         def initialize (peso, altura, edad, sexo, cintura, cadera, factor_actividad_fisica)
 		@peso,@altura,@edad,@sexo, @cintura, @cadera, @factor_actividad_fisica = peso, altura, edad, sexo, cintura, cadera, factor_actividad_fisica 
         end
