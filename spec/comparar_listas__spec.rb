@@ -2,6 +2,7 @@ require 'prct06/lista.rb'
 require 'prct06/prct06'
 require 'prct06/antro'
 require 'prct06/array.rb'
+require "benchmark"
 
 RSpec.describe Prct06 do
         before :each do
@@ -51,7 +52,16 @@ RSpec.describe Prct06 do
 		it "Ordena arrays de menu con bucle sort" do
 			expect(@array_menu.sort).to eq([@e1,@e2,@e3,@e4,@e5])
 		end
-			
+
+		it "Benchmark metodos ordenar Array" do
+            		n=2000
+            		Benchmark.bm do |x|
+                	x.report("for:")  {  n.times{@array_menu.ordenar_for} }
+                	x.report("each:") {  n.times{@array_menu.ordenar_each} }
+                	x.report("sort:") {  n.times{@array_menu.sort} }
+            		end
+		end
+		
 	end
 
 	describe "Pruebas ordenacion de listas" do
@@ -68,6 +78,15 @@ RSpec.describe Prct06 do
 
 		it "Ordena lista de individuos con bucle sort" do
 			expect(@lista.sort).to eq([@a1,@a2,@a3,@a4,@a5])
+		end
+
+		it "Benchmark metodos ordenar Lista" do
+            		n=2000
+            		Benchmark.bm do |x|
+                	x.report("for:") {  n.times{@lista.ordenacion_for} }
+                	x.report("each:") {  n.times{@lista.ordenacion_each} }
+                	x.report("sort:") {  n.times{@lista.sort} }
+            		end
 		end
 	end
 end
