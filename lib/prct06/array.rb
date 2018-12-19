@@ -1,5 +1,16 @@
 class Array
 	
+	def quick_sort(array)
+  		return array if array.size <= 1
+
+  		pivot ||= array.shift
+
+  		left = array.select { |n| n < pivot }
+  		right = array.select { |n| n >= pivot }
+
+ 		return [*quick_sort(left), pivot, *quick_sort(right)]
+	end
+	
 	def ordenar_for
 
 		@resultado = self.map { |x| x }

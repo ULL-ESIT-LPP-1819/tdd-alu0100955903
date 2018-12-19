@@ -39,9 +39,14 @@ RSpec.describe Prct06 do
 
         describe "Pruebas ordenacion de arrays" do
 
-                it "Ordena arrays de menu con bucle for" do
+                it "Ordena arrays de menu con bucle for (iterativa)" do
 
 			expect(@array_menu.ordenar_for).to eq([@e1,@e2,@e3,@e4,@e5])
+		end
+
+		it "Ordena arrays de menu con bucle for (quicksort)" do
+
+			expect(@array_menu.quick_sort(@array_menu)).to eq([@e1,@e2,@e3,@e4,@e5])
 		end
 
 		it "Ordena arrays de menu con bucle each" do
@@ -56,9 +61,10 @@ RSpec.describe Prct06 do
 		it "Benchmark metodos ordenar Array" do
             		n=2000
             		Benchmark.bm do |x|
-                	x.report("for:")  {  n.times{@array_menu.ordenar_for} }
-                	x.report("each:") {  n.times{@array_menu.ordenar_each} }
-                	x.report("sort:") {  n.times{@array_menu.sort} }
+			x.report("for  iterativo: ") {  n.times{@array_menu.ordenar_for} }
+                	x.report("for  quicksort: ") {  n.times{@array_menu.quick_sort(@array_menu)} }
+                	x.report("Fucnional each: ") {  n.times{@array_menu.ordenar_each} }
+                	x.report("sort:           ") {  n.times{@array_menu.sort} }
             		end
 		end
 		
@@ -69,6 +75,7 @@ RSpec.describe Prct06 do
 		it "Ordena lista de individuos con bucle for" do
 
 			expect(@lista.ordenacion_for).to eq([@a1,@a2,@a3,@a4,@a5])
+
 		end
 
 		it "Ordena lista de individuos con bucle each" do

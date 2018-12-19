@@ -135,7 +135,6 @@ class List
                 @resultado
         end
 
-
         def ordenacion_each
                 @resultado = self.map { |x| x }
                 indice=0
