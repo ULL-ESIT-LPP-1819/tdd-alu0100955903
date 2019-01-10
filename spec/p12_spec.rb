@@ -1,7 +1,7 @@
 require 'prct06/lista'
 require 'prct06/prct06'
 require 'prct06/antro'
-
+require 'prct06/menu.rb'
 
 RSpec.describe Prct06 do
 	menu = Menu.new("Lunes") do
